@@ -1,0 +1,187 @@
+(Google Translation to English)
+
+★ Rogue Clone 2 About Japanese Version 1.3 ---------------- 88-08-26
+
+Ota Jun
+ohta@src.ricoh.co.jp
+Ricoh Software Division
+TEL 03-815-7261
+
+★ Introduction ---------------------------------------------------- -------------------
+
+This game is a clone of the original Rogue 5.3 listed on Berkeley UNIX
+The Original author Tim Stoehr sees Rogue and gets the source of the program
+I wanted to insert it, but it was impossible, so I made a clone myself
+It is not. And put the source of the rogue clone in the public domain,
+I made it accessible to everyone.
+
+This original rogue clone (oh confusing) is a program that runs on UNIX
+It was a ram, but I ported it on MS-DOS. Nidec's PC-9801 series
+To be able to run on most MS-DOS machines that can use Japanese, starting with
+I will. The big change is that the message has been localized and colored
+is. At that stage, I ran through the sources, so a great number of bugs were hidden
+It is thought that there is actually (hiddenly :-). These bugs are not the original author
+It is my responsibility.
+
+
+★ About copyright ------------------------------------------------- --------------
+
+Rogue Clone 2 Japanese version 1.3 is copy free including source and executable files
+And anyone can use, modify and redistribute it freely.
+
+Reproduction to various nets, fee-free distribution with the amount of fee + media price, etc.
+As long as the conditions are met, you are free to go without asking the author.
+The condition is (1) not to sell for profit, (2) all documents
+, (3) distributed source, control of use, modification and redistribution of executable files
+It is three that do not add limit.
+
+However, Rogue Clone 2 Japanese Edition 1.3 is not a PDS. original
+About the changes from Rogue Clone 2 of I, Jun Ota
+Owns Of these, about the copyright part, what route was obtained?
+Non-exclusive use for everyone who owns Rogue Clone 2 Japanese Edition 1.3
+I shall give the right. I, Jun Ota, owns the author's personality right,
+We will not exercise this for the future.
+
+Note that the original rogue clone 2 (from the source program #ifdef M
+Except for parts enclosed by SDOS, COLOR, JAPAN, TOPSCO, ANSI
+Is the original meaning of PDS, and there are no restrictions on its use.
+Hmm. However, when the original author distributes the source of this program,
+Do not remove the annotation at the beginning of the program, (2) Create a source program
+Clearly indicate that the author is the original author, (3) by this source program
+As we demand that we do not get personal benefit, we should meet this request as much as possible
+I hope you will
+
+
+To compile a rogue clone ----------------------------------------
+
+The source program for MS-DOS version is Microsoft-C (4.0, 5.1),
+Either Turbo-C (1.5, 2.0) or Lattice-C (4.0)
+Compile with the compiler and the MAKE program supplied with the compiler
+I can.
+
+INSTALL included with the source. If you run BAT, your compiler or MA
+Asked about the type of KE program, then Makefile automatically
+Is created on If you execute MAKE on this Makefile, you
+The loan's executable file is created.
+
+In the case of Turbo-C, the environment version can not be used.
+Please compile in the line version.
+
+If you have changed the source program, please click on 'play. c in the version display in
+Add a message to keep a history of changes.
+
+
+★ To play with a rogue clone ---------------------------------------------- -----
+
+The first person to log is ROGUE. Please read the DOC. Among these are groups
+The basic way of playing is written. For those who know how to play, for MS-DOS games
+If you want to know how to set the floppy, OPTIONS. Please read the DOC.
+In addition, ROGUE. MAN is a simple manual similar to the UNIX command manual
+It is a Japanese translation of what came with the original Rogue Clone 2.
+The books on Rogue include:
+
+・ Rogue handbook (Game handbook series -3) ¥ 1,500
+Masatoshi Takeyama, Nobuyuki Kimura, Masataka Ota Co., Ltd.
+
+
+★ About player menu ----------------------------------------------
+
+ROGUE in the distribution file. COM, multiple people on one MS-DOS machine
+Menu command to play the rogue. Up to 10 players on the menu
+You can register the files, each with its own name and save file.
+It will automatically resume the saved game.
+
+The operation method is simple, move the cursor, space or return with the H, J, K, L keys.
+It is cancellation by selection / execution and escape. When registering or changing the name,
+Spaces (delete one character) and CTRL-U (delete one line) are also effective. PC-9801
+You can also use the cursor keys instead of the H, J, K, L keys.
+
+When first playing with a rogue, from the menu "A. "Player registration" is displayed
+Register the player's name according to the message
+You can use Choose a player with the H, J, K, L keys from next time
+The game starts when you press space.
+
+ROGUE. COM is an environment variable USER, based on player information managed independently
+Rogue options name, file is set, ROg's executable file RO
+GUE. Launch the EXE. For this reason, ROGUE. Play Rogue via COM
+In this case, the environment variables USER and ROGUEOPT9 are temporarily invalidated.
+
+
+★ Major differences from the original rogue 5.3 in the game progression -------------------
+
+The basic strategy is the same as the original, but it is easier overall.
+
+・ The room is always bright and everything is visible as you enter
+
+・ Maze mapping is different
+
+・ There is a large room (!)
+
+・ Effects become clear once you use scrolls and potions
+
+・ You can drop your belongings at the entrance of the room
+
+
+★ Major Changes in Rogue Clone 2 Japanese Version 1.2 -------------------------
+
+・ Port to MS-DOS
+
+・ Japanese correspondence of message and input, and color screen correspondence
+
+・ The same player can get on the top score more than once
+
+・ Add various options (passgo, color, map, dir, type, init, term, cursor)
+
+The following is basically aimed at getting to the original.
+
+・ Change of game end screen
+
+・ Add passgo function (In movement command, it does not stop at the corner of the passage)
+
+・ Add various commands (?,!, D, o, a, @, /)
+
+・ Sort according to the type of inventory list
+
+
+★ Major Changes in Rogue Clone 2 Japanese Version 1.3 -------------------------
+
+・ Execution file size reduction and execution speed improvement
+
+・ Fixed a bug that can identify the kind of belongings by D command when naming unknown belongings
+
+-Fixed a bug that can be isolated room
+
+・ Enhanced signal processing and raw mode processing
+
+-Fixed a bug that could not compile correctly with MSA version Turbo-C 1.5
+
+・ Change memory model in Microsoft-C to medium model
+
+-Correspondence to Turbo-C2.0 and Lattice-C4.0
+
+・ Change screen dump command from "%" to "CTRL-D"
+
+・ Change default value of passgo and color options
+
+・ Delete fullansi option
+
+・ Support for AX machine, NEC PC100, Oki if-800 series
+
+・ Correspondence to each model model of player menu
+
+As a result of the change, the contents of the save file are partially different. Japanese version 1.2
+You can not resume the sub file with Japanese version 1.3.
+
+
+★ Known Bugs ------------------------------------------------- -------------------
+
+Currently, the following bugs are known:
+
+・ When you go to a new floor, it may hang up on rare occasions
+
+・ The passage adjacent to the player may not be displayed after the monster moves
+
+-From the player menu compiled with Lattice C, Lattice
+Launching a C-compiled rogue clone at the end of the rogue clone
+May run away
+?

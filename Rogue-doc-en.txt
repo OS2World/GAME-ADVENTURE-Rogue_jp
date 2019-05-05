@@ -1,0 +1,273 @@
+Invitation to "The Cave of Destiny" by Japanese version Rogue Clone
+
+
+Ota Jun
+
+Ricoh Software Division
+
+
+
+                 Overview
+
+The Japanese version of Rogue Clone can run under MS-DOS.
+Lactor oriented adventure & fantasy game
+Rogue 5.3, which is included in the UNIX version of Berkeley
+It is a clone with similar functions. Here is the Japanese version of Rogue Ku
+I will give some tips on how to play with a loan.
+
+
+
+1. Game scenario (background and progress)
+
+"You just finished a few years at a local warrior training school. Many sweats and trials
+After completing the training, you are always ready to go on a dangerous adventure.
+It is ready. The teachers at the training school send you into the cave of fate to test your skill
+I decided to The ordeal that was imposed on you was to get back the Yender's Amulet and return
+is there. To be successful, you can be part of the prestigious Local Warriors Association.
+Furthermore, all treasures brought back from the cave can be yours.
+
+Take away from the dragon in the dark mountain, which is far away, in preparation for the adventure journey
+A magical bow, a bow, and a bunch of arrows that are said to have been given to you. You
+In addition, the fairy who lives in the forest makes a lot of things that the fairy made and eats until it gets to the cave
+Have After telling your family and friends your last farewell, you headed the way.
+
+After a few days after leaving for the cave, you're finally destiny
+It reached an ancient ruin that became the entrance to the cave of The night was over, so you are in the cave
+I decided to stay at the entrance and that night I slept under the night sky. When it is overnight, you collect weapons,
+He often wore it, took a few meals and went down to the cave .... "
+
+...... From the original article on Rogue "Inviting to the Cave of Fate"
+
+
+The purpose of this game is to explore the cave of fortune and fight the monsters, 25 ground floor
+Search for the avenge of Yender somewhere deep and bring it back to earth
+It is.
+
+A deep underground cave has several rooms on each floor and passages connecting them.
+Each floor of the cave is connected by a stair, which is present only one on each floor. beginning,
+I do not know where these rooms and walkways are. What is there walking around in this
+The role of the player is to explore Players go upstairs looking for each floor
+You have to get down underground. By the way, the map of each floor is different for each game
+It is meaningless to write it down because it has become.
+
+There are monsters waiting to beat the player in the room or passage. monster
+There are various types of, and they attack in different ways. Player is fighting
+Fight against these monsters by fighting command and gain experience and become stronger
+It must be done.
+
+In addition, various things are falling in the room and the passage. Gold directly linked to game scores
+Hunks and food needed to continue the game (If you roam while hungry, the player will die
+There are other items with various magical powers. Pick up these items
+The items picked up are stored in the bag carried by the player. This
+You can take advantage of the battle against the monsters by making good use of them.
+There are also cases where the defeated monster has an item.
+
+
+
+2. Screen layout
+
+The following figure is an example of the screen at the start of the game. The player is on the ground floor of the cave
+I am in one of the rooms. You can see a large quail in the same room with a snake. Also with gold nuggets
+Drops are dropped one by one. Below the player is a staircase that leads to the second floor underground. The
+In addition, the room where the player is located has doors at the top, right, and bottom, and it is separated from the passage to another room
+It seems to be continuing.
+
+-------------------------------------------------------- -------------------------------
+Hi warrior. Welcome to the cave of fate ...
+
+
+
+
+   ----- + ---------------
+   | .. @ .............. *. |
+   ...........!
+   | ................................. |
+   |.% ....................... |
+   | ....... S .... E ...... +
+   ------------- + -------
+
+
+
+Floor: 1 Gold Mass: 0 Strength: 12 (12) Strength: 16 (16) Defense: 4 Experience: 1/0
+-------------------------------------------------------- -------------------------------
+
+The bottom line of the screen shows the current state of the player. The following is the explanation.
+
+Floor: Indicates the floor level of the cave at present.
+
+Gold Bullion: The number of gold bullion picked up so far.
+
+Physical strength: Current and upper limits of physical strength. Indicates how much damage you get and die. Monster
+The value decreases with every attack. If you rest, your physical strength will recover. Head
+The numerical value in the arc represents the upper limit value of the physical strength.
+
+Strength: Current and upper value of strength. This is a number between 3 and 31. This number is large
+The player's attack power is increased. The numbers in parentheses are the largest numbers ever obtained
+It represents the strength.
+
+Defensive: The defensive strength of the armor currently worn. The larger this number, the more the attack of the monster
+It is possible.
+
+Experience: These two numbers indicate the player's current experience level and experience value.
+Experience points go up each time the player does something. When experience reaches a certain value
+You can move on to the next experience level. Player battles get more experienced as they gain experience
+Your arms will rise and you will be able to withstand attacks by magic.
+
+In addition, when the player is hungry, "hunger" or "starving" at the bottom right end
+"餓" may appear.
+
+The top line of the screen is used to display messages. "[Continued]" message
+When the message is displayed, there is a continuation of the message. Strike a space to read this
+It is good.
+
+The other part is the map of the floor. The characters on the screen have the following meanings
+There is.
+
+@ This represents a player.
+
+These symbols represent the walls surrounding the room.
+
++ Doors at the entrance and exit of the room.
+
+The floor of the room.
+
+# A passage between rooms and rooms.
+
+* Bullion.
+
+) Weapons.
+
+] It's a good time.
+
+A small bottle containing a magic potion.
+
+A magical scroll.
+
+= Magic Ring.
+
+/ Magic wand.
+
+^. Usually hidden.
+
+% Stairs leading to the previous or next floor.
+
+: Food.
+
+, Avenger's demon. The ultimate goal is to find out this.
+
+A-Z Various monsters.
+
+
+
+3. command
+
+Rogue advances the game by entering a 1 to 3 letter command. Almost
+Command can specify the number of repetitions (eg "10h"
+Move 10 columns to the left). For commands where the count does not make sense, ignore the count
+Be done. If you want to cancel the command halfway, just hit the escape key.
+In the following description, enter one of the characters "hjklyumn" for <direction>.
+In addition, <character> is a one-character alf representing the property the player is currently carrying.
+Enter the alphabet. (If you enter "*", a list of available properties will be displayed.
+You can select from them and enter. ) Also, in the following explanation "^"
+Represents a control key. That is, "^ H" does not press the control key
+It means to push "H".
+
+? Help command. Display a list of all commands.
+
+/ <Characters>
+It tells you what the letters on the map represent.
+
+h, H, ^ H
+Move to the left. The player moves one position to the left. In the case of capital letters,
+Move to the left until you get it. This is common to all move commands (eg
+For example, "J" means running in the direction of "j"). "Control"
++ In 'h', until the player passes by something or hits a wall
+Keep moving. This is also common to all move commands.
+
+j Move down.
+
+k Move up.
+
+l Move to the right.
+
+y Move to upper left.
+
+u Move to the upper right.
+
+b Move to the lower left.
+
+n Move to the lower right.
+
+t <Direction> <Items (Weapons)>
+Throw the specified property in the specified direction. For example, "the" is a possession "e"
+Throw to the left. (throw)
+
+f <Direction>
+Fight against monsters in the designated direction until either one is likely to die.
+(fight)
+
+F <Direction>
+Fight against monsters in the specified direction until one of them dies. (fight)
+
+m <Direction>
+Move one in the specified direction, but don't pick it up if something is falling there.
+(move)
+
+z <Direction> <Items (Cane)>
+Point the stick in the specified direction and fire it. (zap)
+
+^ <Direction>
+It will tell you what kind of snares are in contact with the specified direction.
+
+s Adjust whether there is a trap or hidden door right next to the player
+	Bell. There are doors and doors that can not be found without having to check them dozens of times.
+(search)
+
+> While standing on the stairs, get off the stairs.
+
+<When you are standing on the stairs, go up the stairs. With the avenge of Yenda
+You can not go up the stairs unless you
+
+To rest. It can be used to wait for something or restore strength.
+
+, While standing on something, pick up what is at your feet.
+
+i This is a command to check your belongings, and the player carries it in a bag
+Display a list of things. (inventory)
+
+I <Items possessed>
+Examine only the specified property. Look at only one thing in the bag.
+(inventory)
+
+q <Available items (Drug)>
+Drink the potion in your belongings. (quaff)
+
+r <Items (rolls)>
+Read the scrolls in your belongings. (read)
+
+e <owned goods (food)>
+Eat food in your belongings. (eat)
+
+w <Items (weapons)>
+Switch weapons. You can not change your cursed weapon.
+(wield)
+
+W <Owned Goods (Yoroi)>
+Wear a uniform. You can only wear one at a time. To the right
+It takes some time to wear. (wear)
+
+T <Owned Goods (Yoroi)>
+Take off the armor. You can not take off the cursed arrow. Take off
+It takes some time to (take off)
+
+P <owned thing (ring)>
+Put on the ring. You can ring one on each hand. One ring
+When you are not using it, you will be asked which hand to put it on, so "l (left)"
+Enter "r (right)". When you are ringing either
+Are put in the hands of those who are not Also, the program is for the player
+It is assumed to have. (put on)
+
+R <owned thing (ring)>
+Remove the ring. When only one ring is worn it is removed. Two
+When you are wearing a ring, you will be asked which one to remove, so "l (left)"
+Enter "r (right)". Also, the cursed ring

@@ -1,0 +1,232 @@
+(Google Translation to English)
+
+★ For Rogue Clone 2 Japanese Version 1.3 Options 89-08-16
+
+Ota Jun
+Ohta@src.ricoh.co.jp
+Ricoh Software Division
+TEL 03-815-7261
+
+1. starting method
+
+To start the game, enter one of the following commands at the prompt:
+
+A) rogue
+
+Start a normal game.
+
+B) rogue -s
+
+See the score. The game does not start.
+
+C) Rogue save file name
+
+Resume the game from the specified save file.
+
+D) rogue -r
+
+Resume the game from the save file set in the environment variable.
+
+
+2. Environment variable
+
+Game parameters can be changed by specifying various environment variables.
+
+A) SET HOME = home directory name
+
+If the game directory is not set in the option c), specify it here
+The score file is placed in the specified home directory. Home directory
+If you do not specify either, the score file is placed in the current directory.
+
+B) SET USER = Player name
+
+Specify the player name. If you do not specify it will be "warrior". I can not see it
+The records on the score file are identified by this USER variable. Single user
+You don't have to worry much about MS-DOS, which is a system.
+
+C) SET ROGUEOPTS = option, option,. . .
+
+Set various game parameters. If there are duplicate parameters,
+The parameters specified in the option of are valid. In addition, option string
+You can not include the comma "," and the equal sign "=" in.
+
+Option Meaning Unspecified value
+[No] jump presence / absence of indication during movement nojump
+[No] passgo do not stop at turning angle passgo
+Display the tombstone at the end of [no] tombstone
+[No] color Color display of map color
+Fruit: <fruit name> Sometimes pick-ups
+File: <save file name> File to save None
+Name: <nickname> Player name may contain spaces
+Directory: <path name> No game directory
+Map: <display color> Display color mapping cbmyg
+Type: <used model> used model name none
+Init: <start column> Start column of screen mode None
+Term: <end column> End column of screen mode None
+Cursor: <On / Off column> Cursor erase string None
+
+★ jump
+When the move command is executed, the screen is displayed until the move is finished and the command is waiting
+Do not rewrite the You can speed up the game progress.
+
+★ passgo
+Move until you hit something, or execute a command to move until you find something
+When going, specify that it will not stop at the corner of the passage.
+
+★ tombstone
+Q Display the player's gravestone at the end of the game except command.
+
+★ color
+Color map in the game, in the display color set in the "map" option
+    indicate. Either "color" or "map" option is set
+If it does not, the display will be monochrome.
+
+★ fruit
+Names of fruits that may be picked up as food during the game, and specify your favorite fruits
+Just do it. Even if you do not specify it does not affect the game progress.
+
+★ file
+When saving the game on the way, the file specified with this option is saved
+Used as a file. If you specify a relative path name,
+Path relative to the directory. When this option is not specified
+Requires the input of a file name for the save command. This option
+Is also used when resuming a saved game.
+
+★ name
+Specify a nickname that will be the player name in the game. To score file
+This name is used for registration. There is no influence on the game progress even if you do not specify it.
+
+★ directory
+Specifies the directory where files for games are placed. During the game this
+Directory becomes the current directory. This option is set
+Score files, screen dump files in this directory
+Created on If not set, the score file is home directory
+Lee, screen dump files are created in the current directory.
+
+★ map
+This option when color display is set in the “color” option
+Of the wall and aisle, the floor, the goods, the
+Each color can be set. The color is w (white), r (red), g (green),
+Specify one of y (yellow), b (blue), m (magenta), and c (cyan)
+    be able to. When a capital letter (WRGYBMC) is specified, it is highlighted.
+The standard setting is 'cbmyg', that is, the walls and passages are cyan, the floor is blue, the monster is
+The items are yellow and the players are green.
+
+★ type
+Specify the model used. By specifying this option, you can
+The "init" and "cursor" options are set accordingly. Specified
+The model names that can be used are as follows.
+
+Pc98 NEC PC-9801 series
+Pc100 NEC PC-100
+Ax companies AX specification machine
+Fmr Fujitsu FMR series
+B16 Hitachi B16 series
+If800 Oki if-800 series
+None Do not assume a specific model
+
+★ init
+Screen mode change such as cursor shape change, which is set at the start of the game
+Specify a loop sequence. Even if you do not specify it does not affect the game progress. actually
+The specified string is the ASCII code of each character in the escape sequence.
+Is represented by two hexadecimal digits. Maximum length of escape sequence is 29
+It is a byte.
+
+For example, for the PC-9801 series, execute the following sequence at game start
+If you want to go
+
+ESC) 0 Indicate the mode to use kanji
+ESC [> 3 l Indicates 25 line mode
+ESC [> 1 h Make the program use the bottom line of the screen
+
+You can define init as follows.
+
+Init: 1b29301b5b3e336c1b5b3e3168
+
+If "pc98" is specified for "type", this string is automatically determined.
+Justified.
+
+★ term
+Specify the screen mode change escape sequence at the end of the game. Specified method
+Is the same as "init".
+
+When "pc98" is specified for "type",
+
+ESC [> 1 l The system uses the bottom line of the screen
+
+For the sequence of
+
+1b5b3e316c
+
+The string is automatically set.
+
+★ cursor
+Specify an escape sequence to turn on / off cursor display. This
+Cursor options when rewriting the screen, if the
+The indication is turned off. Even this option does not affect the game progress even if it is not specified
+Yes. Specify a string similar to "init" separated by "/". Esque
+The length of the loop sequence is up to 9 bytes each.
+
+Hexadecimal display of cursor on / hexadecimal display of cursor off
+
+When "pc98" is specified for "type",
+
+ESC [> 5 l Display the cursor
+ESC [> 5 h Do not show cursor
+
+For the sequence of
+
+1b5b3e356c / 1b5b3e3568
+
+The string is automatically set.
+
+D) SET ROGUE OPT1 to ROGUE OPT9 = options,. . .
+
+The environment variable ROGUEOPT1-9 has the same options as ROGUEOPTS
+It can be specified. When the option does not fit on one line, or temporarily
+Can be used to change to The order of evaluation is ROGUEOPTS, R
+The order is OGUE OPT 1-9.
+
+
+3. CONFIG. SYS
+
+It takes a lot of space for environment variables to set rogue options. For this reason,
+Environment variable area may run out in standard MS-DOS configuration
+(The standard environment variable area is 10 paragraphs, ie 160 bytes). MS-
+If you are using DOS 3.1 or later, CONFIG. By setting of SYS file
+Can be specified to extend this area. SHELL command for this
+Use the E switch of For example, to take an area of ​​20 paragraphs (320 bytes)
+CONFIG. Add the following line to SYS:
+
+SHELL = A: \ COMMAND.COM A: \ / P / E: 20 (for MS-DOS 3.1)
+SHELL = A: \ COMMAND.COM A: \ / P / E: 320 (for MS-DOS 3.3)
+
+In addition, even if you do not expand the environment area, Rogue's command '! (MS-DOS command
+In order to execute ")", SHELL needs to be set. At this time
+CONFIG. Add the following line to SYS:
+
+SHELL = A: \ COMMAND.COM A: \ / P
+
+
+4. Standard setting
+
+Second, if you are using the PC-9801 series with MS-DOS 3.3
+Here are the settings for the gaming system floppy.
+
+★ Contents of root directory
+
+COMMAND .COM Command Interpreter
+CONFIG .SYS system configuration file
+AUTOEXEC.BAT startup execution file
+GAMES game EXE file directory
+
+★ Contents of the directory GAMES
+
+ROGUE .EXE Rogue EXE file
+ROGUEDIR Rogue game directory (initially empty)
+
+★ CONFIG. Contents of SYS
+
+FILES = 12
+BUFFERS = 20
+SHELL = A: \ CO
